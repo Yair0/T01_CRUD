@@ -1,7 +1,14 @@
-<h1>Hola MVC</h1>
-<p>This is my first page</p>
+<h1>Productos - Yair Pimentel A01652823</h1>
 <p>Lista de productos:</p>
-{{#each products}}
-<p>{{id}} {{name}} </p>
-{{/each}}
-<button onclick=window.location.href='./about-us'>Acerca de nosotros</button>
+<table>
+    {{#each products}}
+    <tr>
+        <th>{{id}}</th>
+        <td>{{name}}</td>
+        <td><button onclick=window.location.href='/products/{{id}}'>Mostrar producto</button></td>
+    </tr>
+    {{/each}}
+    <th></th>
+    <td><button onclick=window.location.href='./about-us'>Acerca de nosotros</button></td>
+    <td><button onclick=window.location.href='./products/add-product'>Añadir producto</button></td>
+</table>
